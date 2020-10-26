@@ -1,27 +1,31 @@
-import React from "react";
+import React, { Component } from "react";
 
+class Box extends Component {
+  constructor(props) {
+    super(props);
+    this.handleRemove = this.handleRemove.bind(this);
+  }
 
-function Box({
-    id,
-    handleRemove,
-    width = 5,
-    height = 5,
-    backgroundColor = "peachpuff"
-}) {
-    const remove = handleRemove(id);
+  handleRemove() {
+    this.props.handleRemove(this.props.id);
+  }
+
+  render() {
+    const { height, width, backgroundColor } = this.props;
     return (
-        <div>
-            <div
-            style={{
-                height: `${height}em`,
-                width: `${width}em`,
-                backgroundColor
-            }}
-            >
-            <button onClick={remove}>Remove Box</button>
-            </div>
-        </div>
-    )
+      <div>
+        <div
+          style={{
+            height: `${height}em`,
+            width: `${width}em`,
+            backgroundColor
+          }}
+        />
+        <button onClick={this.handleRemove}>Remove The Box!</button>
+      </div>
+    );
+  }
 }
 
 export default Box;
+

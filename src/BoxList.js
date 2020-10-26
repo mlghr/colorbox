@@ -1,9 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import Box from "./Box";
 import NewBoxForm from "./NewBoxForm"
 
 function BoxList() {
-    const [boxes, Setboxes] = useState([]);
+    const [boxes, setBoxes] = useState([]);
     const add = boxObj => {
         setBoxes(boxes => [...boxes, boxObj]);
     };
