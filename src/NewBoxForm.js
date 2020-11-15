@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {v4 as uuid} from "uuid";
+import "./NewBoxForm.css"
 
 function NewBoxForm({ createBox }) {
   const [formData, setFormData] = useState({
@@ -23,10 +24,10 @@ function NewBoxForm({ createBox }) {
   };
 
   return (
-    <div>
+    <div className="boxForm">
       <form onSubmit={gatherInput}>
         <div>
-          <label htmlFor="height">Height</label>
+          <label className="label" htmlFor="height">Height: </label>
           <input
             onChange={handleChange}
             type="text"
@@ -36,7 +37,7 @@ function NewBoxForm({ createBox }) {
           />
         </div>
         <div>
-          <label htmlFor="width">Width</label>
+          <label className="label" htmlFor="width">Width: </label>
           <input
             onChange={handleChange}
             type="text"
@@ -46,7 +47,7 @@ function NewBoxForm({ createBox }) {
           />
         </div>
         <div>
-          <label htmlFor="backgroundColor">Background Color</label>
+          <label className="label" htmlFor="backgroundColor">Background Color: </label>
           <input
             onChange={handleChange}
             type="text"

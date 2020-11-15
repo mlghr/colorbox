@@ -1,0 +1,6 @@
+.boxButton {
+    background-color: rgba(105, 233, 255, 0.808);
+    border-radius: 3px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+    font-weight: 1000;
+}

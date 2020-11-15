@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./Box.css"
 
 class Box extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class Box extends Component {
             backgroundColor
           }}
         />
-        <button onClick={this.handleRemove}>Remove The Box!</button>
+        <button className="boxButton" onClick={this.handleRemove}>Remove The Box!</button>
       </div>
     );
   }
